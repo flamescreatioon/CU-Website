@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "category": "2023 Day 1",
+        "imageSrc": "assets\/gallery\/2023 Day 1\/IMG_8071.jpg",
+        "altText": "IMG 8071",
+        "title": "IMG 8071",
+        "description": "Image from the 2023 Day 1 category"
+    },
+    {
+        "id": 2,
+        "category": "2023 Day 1",
+        "imageSrc": "assets\/gallery\/2023 Day 1\/TOK_5197.jpg",
+        "altText": "TOK 5197",
+        "title": "TOK 5197",
+        "description": "Image from the 2023 Day 1 category"
+    },
+    {
+        "id": 3,
+        "category": "2023 Day 2",
+        "imageSrc": "assets\/gallery\/2023 Day 2\/IMG_7511.jpg",
+        "altText": "IMG 7511",
+        "title": "IMG 7511",
+        "description": "Image from the 2023 Day 2 category"
+    },
+    {
+        "id": 4,
+        "category": "2023 Day 2",
+        "imageSrc": "assets\/gallery\/2023 Day 2\/TOK_5246.jpg",
+        "altText": "TOK 5246",
+        "title": "TOK 5246",
+        "description": "Image from the 2023 Day 2 category"
+    },
+    {
+        "id": 5,
+        "category": "dinner",
+        "imageSrc": "assets\/gallery\/dinner\/TOK_5327.jpg",
+        "altText": "TOK 5327",
+        "title": "TOK 5327",
+        "description": "Image from the Dinner category"
+    }
+]

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div id="hero">
+      <header>
+        <div class="container header-container">
+          <div href="index.html" class="logo">FGCW CU Body Alumni</div>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Homecoming info</a></li>
+              <li><a href="#">Our Project</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+          <a href="#" class="btn">RSVP Now</a>
+        </div>
+      </header>
+
+      <section class="hero">
+        <div class="hero-container">
+          <div class="hero-content">
+            <h1>Photo Gallery</h1>
+            <p>
+              Relive the memories through our collection of photos from past
+              reunions, events, and memorable moments from our school years.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section>
+      <div class="container" style="margin-top: 2rem;">
+        <h2 class="section-title">Alumni Memories</h2>
+
+        <div class="gallery-filter">
+          <button class="filter-btn active" data-filter="all">
+            All Photos
+          </button>
+          <button class="filter-btn" data-filter="reunions">
+            Past Reunions
+          </button>
+          <button class="filter-btn" data-filter="sports">Sports</button>
+          <button class="filter-btn" data-filter="clubs">
+            Clubs & Activities
+          </button>
+          <button class="filter-btn" data-filter="graduation">
+            Graduation
+          </button>
+          <button class="filter-btn" data-filter="campus">Campus Life</button>
+        </div>
+
+        <div class="gallery-grid" id="gallery-container">
+          <!-- Gallery items will be dynamically generated here -->
+      </div>
+
+      
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox">
+      <div class="lightbox-content">
+        <img src="" alt="Enlarged photo" />
+      </div>
+      <div class="lightbox-caption">
+        <h3></h3>
+        <p></p>
+      </div>
+      <div class="lightbox-close">&times;</div>
+      <div class="lightbox-nav">
+        <div class="lightbox-prev">&lt;</div>
+        <div class="lightbox-next">&gt;</div>
+      </div>
+    </div>
+
+    <section class="quick-links-section">
+      <div class="container">
+        <h2>Get Involved</h2>
+        <div class="links-grid">
+          <div class="link-card">
+            <h3>RSVP</h3>
+            <p>Secure your spot at this year's reunion</p>
+            <a href="#" class="btn">Register Now</a>
+          </div>
+          <div class="link-card">
+            <h3>Donate</h3>
+            <p>Support our project</p>
+            <a href="#" class="btn">Donate Now</a>
+          </div>
+          <div class="link-card">
+            <h3>Connect</h3>
+            <p>Update your information and stay in touch</p>
+            <a href="#" class="btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Homecoming Info</a></li>
+              <li><a href="#">Our project</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Set Champions</a></li>
+              <li><a href="#">Alumni Directory</a></li>
+              
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul>
+              <li>Federal Government College Warri Christian Union Body Alumni Association</li>
+              <li>cufgcw@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>
+            &copy; 2025 Federal Goverment College Warri, Christian Union Body Alumni Association. All Rights
+            Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+    <script src="filter.js"></script>
+  </body>
+</html>
