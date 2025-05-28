@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         console.log('Countdown items found. Initializing countdown.');
 
-        const countdownDate = new Date('July 27, 2025 00:00:00').getTime();
+        const countdownDate = new Date('June 27, 2025 00:00:00').getTime();
 
         function updateCountdown() {
             const now = new Date().getTime();
