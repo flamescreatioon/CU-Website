@@ -60,7 +60,7 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 0.8rem;
     background-color: var(--secondary-color);
     color: var(--white);
     text-decoration: none;
@@ -69,7 +69,20 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.nav-btn{
+    display: inline-block;
+    padding: 1rem;
+    background-color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--white);
+    border-radius: 8px;
+}
+
+
+
+.btn:hover,
+.nav-btn:hover {
     background-color: transparent;
     scale: 1.1;
     border: var(--secondary-color) 1px solid;
@@ -146,11 +159,11 @@ nav ul li a:hover {
     height: 100vh;
     background-size: cover;
     background-position: center;
-}
+    overflow: hidden;
+} 
 
 .hero-content {
     width: 100%;
-    max-width: 1200px;
     padding: 0 1rem;
 }
 
@@ -173,7 +186,6 @@ nav ul li a:hover {
     gap: 1rem;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
 
@@ -1259,6 +1271,10 @@ footer {
         display: none;
     }
 
+    .intro-text h2 {
+        text-align: center;
+    }
+
     .mission{
         padding: 0;
         margin: 0;
@@ -1290,6 +1306,14 @@ footer {
     
     .footer-content {
         flex-direction: column;
+    }
+
+    .project-text h2{
+        text-align: center;
+    }
+
+    .project-image{
+        display: none;
     }
 
  
