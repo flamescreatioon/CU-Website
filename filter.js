@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Filter buttons
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
+    let nextCursor = null;
+    let isLoading = false;
     
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
@@ -45,27 +47,35 @@ document.addEventListener('DOMContentLoaded', function() {
     // Function to load gallery images from a folder
     let loadedGalleryData = []; // Declare a variable to store the response globally
 
-    function loadImagesFromFolder() {
-        // In a real-world scenario, you would have a server-side script
-        // that reads the folder and returns the list of images
-        fetch('gallery-config.json')
-            .then(response => response.json())
-            .then(data => {
-                // Store the loaded data globally
-                loadedGalleryData = data;
+    function loadImagesFromFolder(loadMore = false) {
+    if (isLoading) return;
+    isLoading = true;
 
-                // Store the loaded data in galleryData
-                galleryData.length = 0; // Clear existing data
-                Array.prototype.push.apply(galleryData, data);
-                
-                // Render the gallery with the new data
-                renderGalleryItems();
-            })
-            .catch(error => {
-                console.error('Error loading gallery data:', error);
-                // Fallback to demo data if loading fails
-            });
-    }
+    const url = new URL('gallery-api.php', window.location.href);
+    url.searchParams.append('limit', 12);
+    if (nextCursor) url.searchParams.append('next_cursor', nextCursor);
+
+    fetch(url)
+        .then(res => res.json())
+        .then(data => {
+            if (data.error) {
+                console.error('API Error:', data.error);
+                return;
+            }
+
+            nextCursor = data.next_cursor || null;
+
+            // Only clear gallery if it's a fresh load
+            if (!loadMore) galleryData.length = 0;
+
+            Array.prototype.push.apply(galleryData, data.items);
+            renderGalleryItems(galleryData);
+        })
+        .finally(() => {
+            isLoading = false;
+        });
+}
+
 
    
 
@@ -106,6 +116,19 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+    document.getElementById('load-more-btn').addEventListener('click', function() {
+    if (nextCursor) {
+        loadImagesFromFolder(true);
+    } else {
+        this.style.display = 'none';
+    }
+});
+
+if (!nextCursor) {
+    document.getElementById('load-more-btn').style.display = 'none';
+}
+
+
 
     const lightbox = document.querySelector('.lightbox');
     const lightboxImg = lightbox.querySelector('img');

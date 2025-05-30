@@ -4,15 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('Script loaded'); // Debugging log
 
     const images = [
-        'url("assets/IMG_7511.jpg")',
-        'url("assets/IMG_7526.jpg")',
-        'url("assets/IMG_7827.jpg")',
-        'url("assets/IMG_7830.jpg")',
-        'url("assets/IMG_8071.jpg")',
-        'url("assets/TOK_5197.jpg")',
-        'url("assets/TOK_5246.jpg")',
-        'url("assets/TOK_5292.jpg")',
-        'url("assets/TOK_5327.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597042/IMG_7992_z6iidl.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748467359/TOK_5252_vkzvkn.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748466938/TOK_5349_dnw9i4.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748596999/IMG_7221-2_npivwn.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597017/TOK_5224_k42fch.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597028/IMG_7493_ddoxio.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597062/IMG_7284_kyqzoo.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597079/IMG_7970_unrbfj.jpg")',
+        'url("https://res.cloudinary.com/dswsqkceo/image/upload/v1748597110/IMG_7306_je6gmg.jpg")',
     ];
     let currentIndex = 0;
     let gradient = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0,0,0,0.7))';
