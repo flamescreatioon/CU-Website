@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alumni's in Picture</title>
+    <link rel="preload" href="css/main.css" as="style">
+    <link rel="preload" href="js/app.js" as="script">
+    <link rel="preload" href="filter.js" as="script">
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -40,23 +43,11 @@
     <section>
       <div class="container" style="margin-top: 2rem;">
         <h2 class="section-title">Alumni Memories</h2>
-
-        <div class="gallery-filter">
-          <button class="filter-btn active" data-filter="all">
-            All Photos
-          </button>
-          <button class="filter-btn" data-filter="2023 Day 1">
-            2023 Day 1
-          </button>
-          <button class="filter-btn" data-filter="2023 Day 2">2023 Day 2</button>
-          <button class="filter-btn" data-filter="dinner">
-            dinner
-          </button>
-        </div>
-
         <div class="gallery-grid" id="gallery-container">
           <!-- Gallery items will be dynamically generated here -->
       </div>
+      <!-- Add this after #gallery-container if you want to place it manually -->
+<button id="load-more-btn" class="btn" style="display:none; margin:2rem auto;">Load More</button>
 
       
       </div>
@@ -140,7 +131,7 @@
       </div>
     </footer>
 
-    <script src="js/app.js"></script>
-    <script src="filter.js"></script>
+    <script src="js/app.js" defer></script>
+    <script src="filter.js" defer></script>
   </body>
 </html>
